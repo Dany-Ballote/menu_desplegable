@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src=“https://kit.fontawesome.com/7003421962.js” crossorigin=“anonymous”></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <figure class="ancho">
+            <img src="imagenes/logo.png" alt="logotipo">
+        </figure>
+    </header>
+    <div class="todo">
+        <div class="bar_menu ancho" >
+            <a id="icono_menu" href="#"><img src="imagenes/bars-solid.svg" alt="icono menu"></a> 
+         </div>
+         <nav class="menu" id="menu">
+             <div class="menu1 ancho">
+                 <a href="#inicio" class="btn_ancla">Inicio</a>
+                 <a href="#servicios" class="btn_ancla">Servicios</a>
+                 <a href="#comprar" class="btn_ancla">¿Cómo comprar?</a>
+                 <a href="#ubicacion" class="btn_ancla">Ubicación</a>
+                 <a href="#contactar" class="btn_ancla">Contacto</a>
+     
+             </div>
+         
+         </nav>
+    </div>
+    
+    <section class="box1">
+        <h2 id="servios">Servicios</h2>
+        <div class="texto1 ancho">
+            <article class="info1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+            <article class=" info1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+                <article class=" info1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+                </article>
+ 
+        </div>
+    </section>
+    <section class="box2">
+        <h2 id="comprar">¿Cómo comprar?</h2>
+        <div class="texto2 ancho">
+            <article class="info2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+            <article class="info2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+            <article class="info2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+        </div>
+    </section>
+    <section class="box3">
+        <h2 id="ubicacion">Ubicación</h2>
+        <div class="texto3 ancho">
+            <article class="info3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+            <article class="info3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+            <article class="info3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+        </div>
+    </section>
+    <section class="box4">
+        <h2 id="contactar">Contactanos</h2>
+        <div class="texto4 ancho">
+            <article class="info4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+            <article class="info4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+            <article class="info4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id deserunt velit assumenda rem non, quod, itaque obcaecati fuga error accusamus nam nobis esse nostrum distinctio. Qui atque ipsam culpa.</p>
+            </article>
+        </div>
+    </section>
+        
+    <footer>
+        <div class="contenedor_cecati">
+            <div class="cecati">
+                <p>@CECATI 30</p>
+            </div>
+            <a href="#">
+                <img id="subir" src="imagenes/circle-arrow-up-solid.svg" alt="flecha">
+                 </a>
+          </footer>
+        </div>
+     
+        <script>
+            //funcion para menu
+            $("#icono_menu").click(function () {
+                $("#menu").toggleClass("abrirmenu")
+            });
+
+         $("#subir").click(function () {
+    var ancla = $(this).attr("href");
+    $("html,body").animate(
+      {
+        scrollTop: $(ancla).offset().top,
+      },
+      1000
+    );
+    $("#menu").toggleClass("abrirmenu");
+  });
+
+   //Funcion para  desplazamiento de vinculos
+
+   $("btn_ancla").click( function (){
+         var ancla = $(this).attr("href");
+         $("html,body").animate(
+            {
+                scrollTop: $(ancla).offset().top,
+            },
+            1000
+         );
+         $("#contenedormenu").toggleClass("abrirmenu");
+    })
+ 
+  // Funcion para el boton subir
+  
+    $("#subir").click(function () {
+      $("html,body").animate(
+        {
+          scrollTop: "0px",
+        },
+        1000
+      );
+    });
+
+   
+     </script>
+</body>
+</html>
